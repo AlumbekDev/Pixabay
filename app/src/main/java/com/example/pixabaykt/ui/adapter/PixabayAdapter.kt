@@ -10,7 +10,7 @@ import com.example.pixabaykt.utils.PixabayComparator
 import com.example.pixabaykt.R
 import com.example.pixabaykt.databinding.ImageItemBinding
 
-class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<Pixabay, PixabayAdapter.PixabayViewHolder>(
+class PixabayAdapter(): ListAdapter<Pixabay, PixabayAdapter.PixabayViewHolder>(
     PixabayComparator()
 ) {
 
@@ -33,12 +33,6 @@ class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<
 
     override fun onBindViewHolder(holder: PixabayViewHolder, position: Int) {
         val pixabay = getItem(position)
-        holder.itemView.setOnClickListener {
-        }
         holder.bind(pixabay)
     }
-    class OnClickListener(val clickListener: (pix: Pixabay) -> Unit) {
-        fun onClick(pix: Pixabay) = clickListener(pix)
-    }
-    override fun getItemCount() = currentList.size
 }

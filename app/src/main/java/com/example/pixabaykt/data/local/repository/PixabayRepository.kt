@@ -11,7 +11,7 @@ class PixabayRepository @Inject constructor(
 ) : BaseRepository() {
 
     fun fetchImages(name: CharSequence) = sendRequest {
-        pixabayApi.fetchImages(name).hits
+        pixabayApi.fetchImages(name)
     }
 }
 

@@ -13,7 +13,7 @@ class PixabayViewModel @Inject constructor(
     private val pixabayRepository: PixabayRepository
 ) : BaseViewModel() {
 
-    private val _searchQuery = mutableUiStateFlow<List<Pixabay>>()
+    private val _searchQuery = mutableUiStateFlow<PixabayResponse>()
     val searchQuery = _searchQuery.asStateFlow()
 
 

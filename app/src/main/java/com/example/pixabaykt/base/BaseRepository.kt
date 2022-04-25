@@ -14,13 +14,8 @@ abstract class BaseRepository {
         request().also { data ->
             gatherIfSucceed?.invoke(data)
             emit(Either.Right(value = data))
-
-
         }
-
     }.flowOn(Dispatchers.IO).catch { exception ->
         emit(Either.Left(exception.localizedMessage ?: "An error occurred"))
-
-
     }
 }

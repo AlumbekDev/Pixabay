@@ -1,13 +1,10 @@
 package com.example.pixabaykt.ui.fragments
 
-import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.pixabaykt.R
 import com.example.pixabaykt.base.BaseFragment
 import com.example.pixabaykt.databinding.FragmentImageBinding
@@ -18,22 +15,21 @@ import timber.log.Timber
 @AndroidEntryPoint
 class ImageFragment :
     BaseFragment<FragmentImageBinding, PixabayViewModel>(R.layout.fragment_image) {
-    override lateinit var binding: FragmentImageBinding
+    override val binding: FragmentImageBinding by viewBinding(FragmentImageBinding::bind)
     override val viewModel: PixabayViewModel by viewModels()
-    private lateinit var pixabayAdapter: PixabayAdapter
+    private val pixabayAdapter = PixabayAdapter()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentImageBinding.inflate(inflater, container, false)
-        pixabayAdapter = PixabayAdapter(PixabayAdapter.OnClickListener {
+    override fun initialize() {
+        binding.imageRecycler.adapter = pixabayAdapter
+    }
 
-        })
+    override fun establishRequest() {
         viewModel.getImages("")
         searchQuery()
+    }
+
+    override fun launchObservers() {
         subscribeOnline()
-        return binding.root
     }
 
     private fun searchQuery() {
@@ -53,11 +49,12 @@ class ImageFragment :
     }
 
     private fun subscribeOnline() {
-        viewModel.searchQuery.spectateUiState(error = {
-            Timber.e(it)
-        },
+        viewModel.searchQuery.spectateUiState(
+            error = {
+                Timber.e(it)
+            },
             success = {
-                pixabayAdapter.submitList(it)
+                pixabayAdapter.submitList(it.hits)
             })
     }
 }
