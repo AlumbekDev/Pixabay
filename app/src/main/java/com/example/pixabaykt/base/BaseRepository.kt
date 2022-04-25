@@ -1,6 +1,6 @@
 package com.example.pixabaykt.base
 
-import com.example.pixabaykt.common.either.Either
+import com.example.pixabaykt.domain.either.Either
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow

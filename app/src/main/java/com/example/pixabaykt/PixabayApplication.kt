@@ -16,4 +16,3 @@ class PixabayApplication: Application() {
         Timber.plant(Timber.DebugTree())
     }
 }
-

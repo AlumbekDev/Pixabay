@@ -7,5 +7,7 @@ import retrofit2.http.Query
 interface PixabayApi {
 
     @GET("?key=$API_KEY")
-    suspend fun fetchImages(): PixabayResponse
+    suspend fun fetchImages(
+        @Query("q") query: CharSequence?
+    ) : PixabayResponse
 }

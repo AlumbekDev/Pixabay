@@ -1,4 +1,4 @@
-package com.example.pixabaykt.common.either
+package com.example.pixabaykt.domain.either
 
 sealed class Either<out A, out B> {
     class Left<out A>(val value: A) : Either<A, Nothing>()

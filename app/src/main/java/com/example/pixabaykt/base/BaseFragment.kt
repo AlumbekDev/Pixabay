@@ -9,7 +9,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
 import com.example.pixabaykt.ui.state.UiState
+import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@LayoutRes layoutId: Int) :
@@ -55,6 +57,23 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
         gatherIfSucceed: ((state: UiState<T>) -> Unit)? = null
     ) {
         safeFlowGather(lifecycleState) {
+            collect {
+                gatherIfSucceed?.invoke(it)
+                when (it) {
+                    is UiState.Idle -> {
+                        idle?.invoke(it)
+                    }
+                    is UiState.Loading -> {
+                        loading?.invoke(it)
+                    }
+                    is UiState.Error -> {
+                        error?.invoke(it.error)
+                    }
+                    is UiState.Success -> {
+                        success?.invoke(it.data)
+                    }
+                }
+            }
         }
     }
 
