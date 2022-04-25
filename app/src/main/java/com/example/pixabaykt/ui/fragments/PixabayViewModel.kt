@@ -8,6 +8,7 @@ import com.example.pixabaykt.data.local.entity.Pixabay
 import com.example.pixabaykt.data.local.repository.PixabayRepository
 import com.example.pixabaykt.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -21,7 +22,7 @@ class PixabayViewModel @Inject constructor(
 
     fun getImages(query: CharSequence) = viewModelScope.launch {
         pixabayRepository.fetchImages(query).collect {
-            _searchQuery.value = it
+            _searchQuery
         }
     }
 

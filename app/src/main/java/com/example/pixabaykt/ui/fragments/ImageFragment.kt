@@ -11,7 +11,6 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import com.example.pixabaykt.R
 import com.example.pixabaykt.databinding.FragmentImageBinding
 import com.example.pixabaykt.ui.adapter.PixabayAdapter
