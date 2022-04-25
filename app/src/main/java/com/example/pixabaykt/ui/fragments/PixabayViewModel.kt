@@ -27,8 +27,8 @@ class PixabayViewModel @Inject constructor(
     }
 
     fun fetchImagesFromDB(query: String) = viewModelScope.launch {
-        pixabayRepository.fetchImagesFromDB(query).collect {
-            _searchQuery.value = it
-        }
+//        pixabayRepository.fetchImagesFromDB(query).collect {
+//            _searchQuery.value = it
+//        }
     }
 }
