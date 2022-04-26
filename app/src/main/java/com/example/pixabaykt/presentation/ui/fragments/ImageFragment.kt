@@ -1,4 +1,4 @@
-package com.example.pixabaykt.ui.fragments
+package com.example.pixabaykt.presentation.ui.fragments
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -8,7 +8,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.pixabaykt.R
 import com.example.pixabaykt.base.BaseFragment
 import com.example.pixabaykt.databinding.FragmentImageBinding
-import com.example.pixabaykt.ui.adapter.PixabayAdapter
+import com.example.pixabaykt.presentation.ui.adapter.PixabayAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 

@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.ImageFragment">
+    android:background="@color/black"
+    tools:context=".presentation.ui.fragments.ImageFragment">
 
     <EditText
         android:id="@+id/et_search"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:background="@drawable/round_edittext"
         app:layout_constraintBottom_toTopOf="@id/imageRecycler"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="11dp"
+        android:hint="Search Image"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

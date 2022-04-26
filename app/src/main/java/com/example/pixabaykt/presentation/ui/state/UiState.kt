@@ -1,4 +1,4 @@
-package com.example.pixabaykt.ui.state
+package com.example.pixabaykt.presentation.ui.state
 
 sealed class UiState<T> {
     class Idle<T> : UiState<T>()

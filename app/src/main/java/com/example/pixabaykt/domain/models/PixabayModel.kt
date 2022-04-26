@@ -1,14 +1,6 @@
-package com.example.pixabaykt.data.local.entity
+package com.example.pixabaykt.domain.models
 
-import android.os.Parcelable
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import kotlinx.android.parcel.Parcelize
-
-@Parcelize
-@Entity(tableName = "pixabay_table")
-data class Pixabay(
-    @PrimaryKey
+data class PixabayModel(
     val id: Int,
     val collections: Int,
     val comments: Int,
@@ -31,4 +23,4 @@ data class Pixabay(
     val webformatHeight: Int,
     val webformatURL: String,
     val webformatWidth: Int
-): Parcelable
+)
