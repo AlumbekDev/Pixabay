@@ -14,5 +14,3 @@ class PixabayRepositoryImpl @Inject constructor(
         pixabayApi.fetchImages(name).toDomain()
     }
 }
-
-

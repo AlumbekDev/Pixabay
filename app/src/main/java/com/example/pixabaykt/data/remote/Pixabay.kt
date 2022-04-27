@@ -8,9 +8,7 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-@Entity(tableName = "pixabay_table")
 data class Pixabay(
-    @PrimaryKey
     @SerializedName("id")
     val id: Int,
     val collections: Int,
