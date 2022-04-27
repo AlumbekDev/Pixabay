@@ -1,12 +1,16 @@
 package com.example.pixabaykt.data.remote
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.example.pixabaykt.domain.models.PixabayModel
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
+@Entity(tableName = "pixabay_table")
 data class Pixabay(
+    @PrimaryKey
     @SerializedName("id")
     val id: Int,
     val collections: Int,

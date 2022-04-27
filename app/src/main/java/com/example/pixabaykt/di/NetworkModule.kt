@@ -1,8 +1,6 @@
 package com.example.pixabaykt.di
 
-import com.example.pixabaykt.data.repository.PixabayRepositoryImpl
 import com.example.pixabaykt.data.remote.PixabayApi
-import com.example.pixabaykt.domain.repositories.PixabayRepository
 import com.example.pixabaykt.utils.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -42,10 +40,5 @@ object NetworkModule {
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
             .build()
-    }
-
-    @Provides
-    fun providePixabayRepository(api: PixabayApi): PixabayRepository {
-        return PixabayRepositoryImpl(api)
     }
 }
