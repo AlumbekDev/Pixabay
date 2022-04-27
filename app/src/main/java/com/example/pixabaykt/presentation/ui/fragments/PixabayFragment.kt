@@ -13,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
 @AndroidEntryPoint
-class ImageFragment :
+class PixabayFragment :
     BaseFragment<FragmentImageBinding, PixabayViewModel>(R.layout.fragment_image) {
     override val binding: FragmentImageBinding by viewBinding(FragmentImageBinding::bind)
     override val viewModel: PixabayViewModel by viewModels()
