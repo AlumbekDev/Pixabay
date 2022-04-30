@@ -1,9 +1,9 @@
-package com.example.pixabaykt.data.repository
+package com.example.pixabeyapp.data.repository
 
-import com.example.pixabaykt.base.BaseRepository
-import com.example.pixabaykt.data.remote.PixabayApi
-import com.example.pixabaykt.data.remote.toDomain
 import com.example.pixabaykt.domain.repositories.PixabayRepository
+import com.example.pixabeyapp.data.remote.PixabayApi
+import com.example.pixabeyapp.data.remote.toDomain
+import com.example.pixabeyapp.data.repository.base.BaseRepository
 import javax.inject.Inject
 
 class PixabayRepositoryImpl @Inject constructor(

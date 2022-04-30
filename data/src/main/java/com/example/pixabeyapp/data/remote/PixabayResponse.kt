@@ -1,4 +1,4 @@
-package com.example.pixabaykt.data.remote
+package com.example.pixabeyapp.data.remote
 
 import com.example.pixabaykt.domain.models.PixabayResponseModel
 import com.google.gson.annotations.SerializedName
