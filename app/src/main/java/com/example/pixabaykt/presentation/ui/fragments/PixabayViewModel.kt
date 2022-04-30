@@ -1,7 +1,7 @@
 package com.example.pixabaykt.presentation.ui.fragments
 
-import com.example.pixabaykt.base.BaseViewModel
 import com.example.pixabaykt.domain.usecase.PixaBayUseCase
+import com.example.pixabaykt.base.BaseViewModel
 import com.example.pixabaykt.presentation.ui.models.PixabayResponseUI
 import com.example.pixabaykt.presentation.ui.models.toUI
 import dagger.hilt.android.lifecycle.HiltViewModel

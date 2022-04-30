@@ -1,13 +1,7 @@
-package com.example.pixabaykt.data.remote
+package com.example.pixabeyapp.data.remote
 
-import android.os.Parcelable
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 import com.example.pixabaykt.domain.models.PixabayModel
-import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
 data class Pixabay(
     val id: Int,
     val collections: Int,
@@ -31,7 +25,8 @@ data class Pixabay(
     val webformatHeight: Int,
     val webformatURL: String,
     val webformatWidth: Int
-): Parcelable
+)
+
 fun Pixabay.toDomain() = PixabayModel(
     id,collections, comments, downloads, imageHeight, imageSize, imageWidth, largeImageURL, likes, pageURL, previewHeight, previewURL, previewWidth, tags, type, user, userId, userImageURL, views, webformatHeight, webformatURL, webformatWidth
 )

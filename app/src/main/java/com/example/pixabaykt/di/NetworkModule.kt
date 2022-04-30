@@ -1,22 +1,18 @@
 package com.example.pixabaykt.di
 
-import com.example.pixabaykt.data.remote.PixabayApi
 import com.example.pixabaykt.utils.Constants.Companion.BASE_URL
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
+import com.example.pixabeyapp.data.remote.PixabayApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@Module
-@InstallIn(SingletonComponent::class)
+@dagger.Module
+@dagger.hilt.InstallIn(dagger.hilt.components.SingletonComponent::class)
 object NetworkModule {
 
-    @Provides
+    @dagger.Provides
     @Singleton
     fun providesRetrofit(): Retrofit {
         return Retrofit.Builder()
@@ -26,13 +22,13 @@ object NetworkModule {
             .build()
     }
 
-    @Provides
+    @dagger.Provides
     @Singleton
     fun providesApi(retrofit: Retrofit): PixabayApi {
         return retrofit.create(PixabayApi::class.java)
     }
 
-    @Provides
+    @dagger.Provides
     @Singleton
     fun providesHttpLoggingInterceptor(): OkHttpClient {
         val loggingInterceptor = HttpLoggingInterceptor()

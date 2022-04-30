@@ -23,3 +23,5 @@ dependencyResolutionManagement {
 rootProject.name = "PiXABayKT"
 include(":app")
 enableFeaturePreview("VERSION_CATALOGS")
+include(":domain")
+include(":data")

@@ -42,29 +42,22 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
-    }
-    packagingOptions {
-        resources.pickFirsts.add("META-INF/*")
-        resources.excludes.add("META-INF/DEPENDENCIES")
-        resources.excludes.add("META-INF/LICENSE")
-        resources.excludes.add("META-INF/LICENSE.txt")
-        resources.excludes.add("META-INF/license.txt")
-        resources.excludes.add("META-INF/NOTICE")
-        resources.excludes.add("META-INF/NOTICE.txt")
-        resources.excludes.add("META-INF/notice.txt")
-        resources.excludes.add("META-INF/ASL2.0")
-        resources.excludes.add("META-INF/*")
+        jvmTarget = "11"
     }
     //ViewBinding
     buildFeatures.viewBinding = true
 }
 
 dependencies {
+
+    implementation(project(":data"))
+
+    implementation(project(":domain"))
+
     // UI Components
     implementation(libs.bundles.uiComponents)
 

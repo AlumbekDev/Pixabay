@@ -1,4 +1,4 @@
-package com.example.pixabaykt.base
+package com.example.pixabeyapp.data.repository.base
 
 import com.example.pixabaykt.domain.either.Either
 import kotlinx.coroutines.Dispatchers

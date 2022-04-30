@@ -7,7 +7,6 @@ import com.example.pixabaykt.presentation.ui.state.UiState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 abstract class BaseViewModel : ViewModel() {
