@@ -80,13 +80,11 @@ dependencies {
     implementation(libs.bundles.retrofitBundle)
 
     // OkHttpClient
-    implementation("com.squareup.okhttp3:logging-interceptor")
-    implementation("com.squareup.okhttp3:okhttp")
-    implementation(libs.okHttp.bom)
+    implementation(libs.bundles.okHttp)
+
 
     // Hilt
-    implementation(libs.hilt.hilt)
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 
     // Legacy Support
