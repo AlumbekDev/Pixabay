@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -32,20 +33,18 @@ android {
 }
 
 dependencies {
-    implementation (project(":domain"))
-
-    // Retrofit 2
-    val retrofit_version = "2.9.0"
-    implementation (libs.bundles.retrofitBundle)
-
-    // | Gson
-    implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
+    implementation(project(":domain"))
 
     // Glide
     implementation(libs.glide.glide)
 
     // OkHttp
-    implementation ("com.squareup.okhttp3:okhttp-bom:4.9.0")
-    implementation ("com.squareup.okhttp3:okhttp:")
-    implementation ("com.squareup.okhttp3:logging-interceptor")
+    implementation(libs.bundles.okHttp)
+
+    // Retrofit
+    implementation(libs.bundles.retrofitBundle)
+
+    // Room
+    implementation(libs.bundles.roomBundle)
+    kapt(libs.room.compiler)
 }
