@@ -95,10 +95,4 @@ dependencies {
 
     // SplashScreen
     implementation(libs.ui.splashScreen)
-
-    // Room
-    implementation(libs.bundles.roomBundle)
-    kapt(libs.room.compiler)
-
-    implementation ("com.jakewharton.timber:timber:5.0.1")
 }
