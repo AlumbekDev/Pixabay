@@ -26,6 +26,8 @@ koin = "3.2.0-beta-1"
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 android-gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
 
+coroutines-core  = {  module  =  "org.jetbrains.kotlinx:kotlinx-coroutines-core" ,  version.ref  =  "coroutines"  }
+
 android-core = { module = "androidx.core:core-ktx", version.ref = "core" }
 fragment-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
 activity-activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
