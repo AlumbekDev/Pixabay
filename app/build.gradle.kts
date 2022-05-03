@@ -76,19 +76,12 @@ dependencies {
     // Navigation
     implementation(libs.bundles.navigationBundle)
 
-    // Retrofit
-    implementation(libs.bundles.retrofitBundle)
-
     // OkHttpClient
     implementation(libs.bundles.okHttp)
-
 
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-
-    // Legacy Support
-    implementation(libs.legacySupport.legacySupport)
 
     // Glide
     implementation(libs.glide.glide)

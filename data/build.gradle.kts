@@ -41,6 +41,9 @@ dependencies {
     // | Gson
     implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
 
+    // Glide
+    implementation(libs.glide.glide)
+
     // OkHttp
     implementation ("com.squareup.okhttp3:okhttp-bom:4.9.0")
     implementation ("com.squareup.okhttp3:okhttp:")
