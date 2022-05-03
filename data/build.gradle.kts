@@ -35,9 +35,6 @@ android {
 dependencies {
     implementation(project(":domain"))
 
-    // Glide
-    implementation(libs.glide.glide)
-
     // OkHttp
     implementation(libs.bundles.okHttp)
 
