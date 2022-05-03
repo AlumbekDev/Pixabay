@@ -76,13 +76,9 @@ dependencies {
     // Navigation
     implementation(libs.bundles.navigationBundle)
 
-
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-
-    // Legacy Support
-    implementation(libs.legacySupport.legacySupport)
 
     // Glide
     implementation(libs.glide.glide)
