@@ -35,13 +35,15 @@ android {
 dependencies {
     implementation(project(":domain"))
 
+
+
     // OkHttp
     implementation(libs.bundles.okHttp)
 
     // Retrofit
-    implementation(libs.bundles.retrofitBundle)
+    implementation(libs.bundles.retrofit)
 
     // Room
-    implementation(libs.bundles.roomBundle)
+    implementation(libs.bundles.room)
     kapt(libs.room.compiler)
 }

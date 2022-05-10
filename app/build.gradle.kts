@@ -71,10 +71,10 @@ dependencies {
     implementation(libs.fragment.fragment)
 
     // Lifecycle
-    implementation(libs.bundles.lifecycleBundle)
+    implementation(libs.bundles.lifecycle)
 
     // Navigation
-    implementation(libs.bundles.navigationBundle)
+    implementation(libs.bundles.navigation)
 
     // Hilt
     implementation(libs.hilt.android)
