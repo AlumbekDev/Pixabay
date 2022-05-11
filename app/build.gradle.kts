@@ -64,12 +64,6 @@ dependencies {
     // Core
     implementation(libs.android.core)
 
-    // Activity
-    implementation(libs.activity.activity)
-
-    // Fragment
-    implementation(libs.fragment.fragment)
-
     // Lifecycle
     implementation(libs.bundles.lifecycle)
 
@@ -79,11 +73,5 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-
-    // Glide
-    implementation(libs.glide.glide)
-
-    // SplashScreen
-    implementation(libs.ui.splashScreen)
 
 }

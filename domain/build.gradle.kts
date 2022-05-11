@@ -7,6 +7,6 @@ java {
 }
 
 dependencies {
-    api("javax.inject:javax.inject:1")
+    api(libs.javax.inject)
     implementation(libs.coroutines.core)
 }
