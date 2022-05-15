@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.pixabaykt.R
 import com.example.pixabaykt.databinding.ImageItemBinding
-import com.example.pixabaykt.presentation.ui.models.PixabayUI
+import com.example.pixabaykt.presentation.models.PixabayUI
 import com.example.pixabaykt.utils.PixabayComparator
 
 class PixabayAdapter() : ListAdapter<PixabayUI, PixabayAdapter.PixabayViewHolder>(

@@ -1,4 +1,4 @@
-package com.example.pixabaykt.presentation.ui.models
+package com.example.pixabaykt.presentation.models
 
 import com.example.pixabaykt.domain.models.PixabayModel
 
