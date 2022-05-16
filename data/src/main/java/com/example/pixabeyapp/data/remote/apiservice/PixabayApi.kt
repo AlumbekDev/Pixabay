@@ -1,5 +1,6 @@
-package com.example.pixabeyapp.data.remote
+package com.example.pixabeyapp.data.remote.apiservice
 
+import com.example.pixabeyapp.data.remote.PixabayResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

@@ -1,7 +1,7 @@
 package com.example.pixabeyapp.data.repository
 
 import com.example.pixabaykt.domain.repositories.PixabayRepository
-import com.example.pixabeyapp.data.remote.PixabayApi
+import com.example.pixabeyapp.data.remote.apiservice.PixabayApi
 import com.example.pixabeyapp.data.remote.toDomain
 import com.example.pixabeyapp.data.repository.base.BaseRepository
 import javax.inject.Inject

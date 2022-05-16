@@ -1,5 +1,6 @@
 package com.example.pixabeyapp.data.remote
 
+import com.example.pixabeyapp.data.remote.apiservice.PixabayApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

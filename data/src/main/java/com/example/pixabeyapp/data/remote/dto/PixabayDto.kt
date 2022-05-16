@@ -1,8 +1,8 @@
-package com.example.pixabeyapp.data.remote
+package com.example.pixabeyapp.data.remote.dto
 
 import com.example.pixabaykt.domain.models.PixabayModel
 
-data class Pixabay(
+data class PixabayDto(
     val id: Int,
     val collections: Int,
     val comments: Int,
@@ -27,6 +27,6 @@ data class Pixabay(
     val webformatWidth: Int
 )
 
-fun Pixabay.toDomain() = PixabayModel(
+fun PixabayDto.toDomain() = PixabayModel(
     id,collections, comments, downloads, imageHeight, imageSize, imageWidth, largeImageURL, likes, pageURL, previewHeight, previewURL, previewWidth, tags, type, user, userId, userImageURL, views, webformatHeight, webformatURL, webformatWidth
 )
